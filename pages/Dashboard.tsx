@@ -49,7 +49,7 @@ export default function Dashboard() {
           <button className="btn" type="submit">Submit</button>
         </div>
       </form>
-      {shortCode && <p className="text-black">Shortened URL: <a href={`http://localhost:3000/${shortCode}`}>{`http://localhost:3000/${shortCode}`}</a></p>}
+      {shortCode && <p className="text-black">Shortened URL: <a href={`${process.env.NEXT_PUBLIC_HOST_NAME}/${shortCode}`}>{`${process.env.NEXT_PUBLIC_HOST_NAME}/${shortCode}`}</a></p>}
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
     </div>
   );
